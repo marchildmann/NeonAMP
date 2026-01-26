@@ -450,7 +450,10 @@ function scanMusicDirectory(PDO $pdo): array
 
     foreach ($iterator as $file) {
         if ($file->isFile() && strtolower($file->getExtension()) === 'mp3') {
-            $relativePath = str_replace(MUSIC_PATH . '/', '', $file->getPathname());
+            // Normalize paths to forward slashes for cross-platform compatibility
+            $normalizedMusicPath = str_replace('\\', '/', MUSIC_PATH);
+            $normalizedFilePath = str_replace('\\', '/', $file->getPathname());
+            $relativePath = str_replace($normalizedMusicPath . '/', '', $normalizedFilePath);
             $filename = $file->getBasename('.mp3');
 
             // Parse ID3 tags from the MP3 file
@@ -1636,7 +1639,8 @@ $stats = getStats($pdo);
 
                 this.currentIndex = index;
                 this.currentTrack = track;
-                targetDeck.audio.src = 'music/' + track.path;
+                // Normalize path separators for Windows compatibility
+                targetDeck.audio.src = 'music/' + track.path.replace(/\\/g, '/');
 
                 document.getElementById('current-title').textContent = track.title || track.filename;
                 document.getElementById('current-artist').textContent = track.artist || 'Unknown';
@@ -1799,7 +1803,8 @@ $stats = getStats($pdo);
                 const inactiveDeck = this.getInactiveDeck();
                 const activeDeck = this.getActiveDeck();
 
-                inactiveDeck.audio.src = 'music/' + nextTrack.path;
+                // Normalize path separators for Windows compatibility
+                inactiveDeck.audio.src = 'music/' + nextTrack.path.replace(/\\/g, '/');
                 inactiveDeck.gainNode.gain.value = 0;
                 inactiveDeck.audio.play();
 
