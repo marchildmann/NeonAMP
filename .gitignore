@@ -1,0 +1,18 @@
+# Ignore all files in the music directory
+music/*
+
+# Ignore the SQLite database file
+library.sqlite
+
+# Ignore Mac resource files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+.vscode/
+.idea/
+*.swp
+*.swo
