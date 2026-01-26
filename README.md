@@ -63,9 +63,4 @@ NeonAMP/
 
 ## License
 
-MIT - Free as in **radical**.
-
----
-
-**Star this repo if you want more retro music tools!**
-```
+MIT
