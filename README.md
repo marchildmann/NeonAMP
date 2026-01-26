@@ -34,7 +34,7 @@ php -S localhost:8000
 - **Play Queue** system (add tracks to play next)
 - **Audio visualizer** with glowing effects
 
-### ⌨Keyboard Shortcuts
+### Keyboard Shortcuts
 | Key | Action |
 |-----|--------|
 | `Space` | Play/Pause |
