@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /**
- * IDS-Amp - Web Audio API MP3 Player
+ * NeonAMP - Web Audio API MP3 Player
  * PHP 8.3+ Required
  */
 
@@ -794,7 +794,7 @@ $stats = getStats($pdo);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDS-Amp</title>
+    <title>NeonAMP</title>
     <style>
         * {
             margin: 0;
