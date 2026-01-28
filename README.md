@@ -51,16 +51,6 @@ php -S localhost:8000
 - **Web Audio API** for pro-level audio control
 - **Native ID3 parsing** (no external dependencies)
 
-## Project Structure
-
-```
-NeonAMP/
-├── index.php        # The whole app!
-├── music/           # Your MP3s go here
-├── library.sqlite   # Auto-created database
-└── README.md        # You're reading it!
-```
-
 ## License
 
 MIT

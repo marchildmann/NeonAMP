@@ -2398,8 +2398,6 @@ $stats = getStats($pdo);
                 }
                 return;
             }
-
-            // ... existing handlers continue
         });
 
         // Now Playing modal
